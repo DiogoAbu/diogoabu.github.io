@@ -21,11 +21,11 @@ body {
 .App {
   background-color: $bgColor;
   color: $textColor;
+  min-height: 100vh;
 }
 
 .ScrollArea {
   height: 100vh;
-  min-height: 100vh;
 
   .scrollbar-container {
     border-radius: 6px;

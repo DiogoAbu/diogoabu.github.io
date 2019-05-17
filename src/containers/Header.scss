@@ -8,10 +8,9 @@
   right: 12px;
   z-index: 999;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-end;
-  align-content: center;
-  align-items: center;
+  align-items: flex-end;
   pointer-events: none;
 
   .ButtonDropdown {
@@ -66,7 +65,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  background: transparent;
+  background: $bgColor;
   border: 1px solid $buttonBorderColor;
   border-radius: 6px;
   border-top-right-radius: 0;
@@ -75,7 +74,7 @@
     width: 100%;
     padding: 12px;
     border: 0 none;
-    background: transparent;
+    background: $bgColor;
     color: $textColor;
     font-size: 16px;
     display: block;

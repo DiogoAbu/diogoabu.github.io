@@ -20,8 +20,6 @@ const urls = {
 const Home = React.forwardRef((props, ref) => {
   const { t, i18n } = useTranslation();
 
-  // document.title = "Diogo Silva - " + t("Desenvolvedor Full-Stack");
-
   return (
     <div className="Home" ref={ref}>
       <div className="PicContainer">

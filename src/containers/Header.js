@@ -83,6 +83,13 @@ function Header() {
 
   return (
     <div className="Header">
+      <button className="Button" onClick={() => dispatch(toggleDarkMode())}>
+        <Icon
+          className="icon"
+          path={state.isDarkMode ? mdiLightbulbOff : mdiLightbulb}
+          size={1}
+        />
+      </button>
       <div className="ButtonDropdown">
         <button ref={buttonRef} className="Button" onClick={toggleMenu}>
           {currentLang}
@@ -96,13 +103,6 @@ function Header() {
           />
         )}
       </div>
-      <button className="Button" onClick={() => dispatch(toggleDarkMode())}>
-        <Icon
-          className="icon"
-          path={state.isDarkMode ? mdiLightbulbOff : mdiLightbulb}
-          size={1}
-        />
-      </button>
     </div>
   );
 }

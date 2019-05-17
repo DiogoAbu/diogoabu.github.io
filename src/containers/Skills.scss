@@ -1,11 +1,12 @@
 @import "../variables.scss";
 
 .Skills {
+  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: relative;
 
   .Title {
@@ -30,6 +31,15 @@
 
     & > .Tag {
       margin: 6px;
+    }
+  }
+}
+
+@supports (-webkit-appearance: none) {
+  html.os-android {
+    .Skills {
+      height: calc(100vh - 56px);
+      min-height: calc(100vh - 56px);
     }
   }
 }

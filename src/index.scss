@@ -7,12 +7,7 @@
   transition-property: background, color;
 }
 
-html {
-  height: 100vh;
-}
-
 body {
-  height: 100vh;
   margin: 0;
   padding: 0;
   font-size: calc(10px + 2vmin);
@@ -23,18 +18,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  height: 100vh;
-}
-
 .App {
-  height: 100vh;
   background-color: $bgColor;
   color: $textColor;
 }
 
 .ScrollArea {
   height: 100vh;
+  min-height: 100vh;
 
   .scrollbar-container {
     border-radius: 6px;
@@ -85,6 +76,15 @@ body {
       .scrollbar {
         background: $brandPrimaryLight !important;
       }
+    }
+  }
+}
+
+@supports (-webkit-appearance: none) {
+  html.os-android {
+    .ScrollArea {
+      height: calc(100vh - 56px);
+      min-height: calc(100vh - 56px);
     }
   }
 }

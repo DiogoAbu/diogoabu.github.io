@@ -55,9 +55,11 @@ const Education = React.forwardRef((props, ref) => {
         ))}
       </div>
 
-      <button className="ScrollToTopIcon" onClick={onScrollToTop}>
-        <Icon path={mdiChevronUpBox} size={1.5} />
-      </button>
+      <div className="ScrollToTopIcon">
+        <button onClick={onScrollToTop}>
+          <Icon path={mdiChevronUpBox} size={1.5} />
+        </button>
+      </div>
     </div>
   );
 });

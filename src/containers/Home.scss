@@ -5,11 +5,12 @@
 }
 
 .Home {
+  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   position: relative;
   //background-image: url("/bg1.webp");
   //background-size: cover;
@@ -60,5 +61,14 @@
 
   .Mail {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0) !important;
+  }
+}
+
+@supports (-webkit-appearance: none) {
+  html.os-android {
+    .Home {
+      height: calc(100vh - 56px);
+      min-height: calc(100vh - 56px);
+    }
   }
 }

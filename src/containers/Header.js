@@ -77,18 +77,22 @@ function Header() {
     };
   }, [menuRef, toggleMenu]);
 
+  const currentLang = availableLangs.includes(i18n.language)
+    ? i18n.language
+    : "en";
+
   return (
     <div className="Header">
       <div className="ButtonDropdown">
         <button ref={buttonRef} className="Button" onClick={toggleMenu}>
-          {i18n.language}
+          {currentLang}
         </button>
         {isShowingMenu && (
           <DropdownMenu
             buttonRef={buttonRef}
             menuRef={menuRef}
             onClick={onChangeLanguage}
-            currentLang={i18n.language}
+            currentLang={currentLang}
           />
         )}
       </div>

@@ -39,6 +39,7 @@
     background-color: transparent;
     transition: all 0.1s ease-in-out;
     pointer-events: auto;
+    outline: 0;
 
     &:hover,
     &.active {

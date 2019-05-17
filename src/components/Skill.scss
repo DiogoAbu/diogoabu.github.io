@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.Skill {
+  width: 80vw;
+  max-width: 500px;
+
+  .Details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      font-size: 80%;
+
+      &:first-child {
+        flex: 1;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .ProgressContainer {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    background: $bgColorContrast;
+    margin-top: 6px;
+
+    .ProgressFill {
+      height: 12px;
+      border-radius: 6px;
+      background: $brandPrimary;
+
+      &.info {
+        background: $brandInfo;
+      }
+      &.success {
+        background: $brandSuccess;
+      }
+      &.warning {
+        background: $brandWarning;
+      }
+      &.danger {
+        background: $brandDanger;
+      }
+    }
+  }
+}
+
+.light {
+  .ProgressContainer {
+    background: $bgColorContrastLight;
+    .ProgressFill {
+      background: $brandInfoLight;
+    }
+  }
+}

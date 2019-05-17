@@ -1,0 +1,118 @@
+@import "../variables.scss";
+
+.Education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+  .Title {
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 48px;
+  }
+
+  .EducationContainer {
+    font-size: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .EducationYearContainer {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .EducationLine {
+        display: block;
+        width: 2px;
+        height: 100%;
+        background: $bgColorContrast;
+      }
+
+      .EducationYear {
+        margin: 0 24px;
+        padding: 3px 6px;
+        color: $brandInfoTextColor;
+        background: $brandInfo;
+        border-radius: 6px;
+      }
+    }
+
+    .EducationDetails {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 0 0 36px 0;
+
+      .EducationTitle {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .Languages {
+    width: 80vw;
+    max-width: 500px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > .Tag {
+      margin: 6px;
+      padding: 6px 9px;
+    }
+  }
+}
+
+.ScrollToTopIcon {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  left: 0;
+  margin: auto;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+
+  padding: 0;
+  border: none;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  path {
+    fill: $textColor;
+  }
+}
+
+.light {
+  .EducationLine {
+    background: $bgColorContrastLight;
+  }
+
+  .EducationYear {
+    color: $brandInfoTextColorLight;
+    background: $brandInfoLight;
+  }
+
+  .ScrollToTopIcon {
+    path {
+      fill: $textColorLight;
+    }
+  }
+}

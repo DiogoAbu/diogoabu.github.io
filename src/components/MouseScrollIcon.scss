@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+.MouseScrollIcon {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  left: 0;
+  margin: auto;
+
+  width: 23px;
+  height: 36px;
+
+  .Mouse {
+    width: 3px;
+    padding: 1px 8px;
+    height: 30px;
+    border: 2px solid $textColor;
+    border-radius: 12px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+
+  .MouseScroller {
+    margin-top: 3px;
+    width: 3px;
+    height: 8px;
+    border-radius: 25%;
+    background-color: $textColor;
+    animation-name: scrollAnim;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite;
+  }
+}
+
+.light {
+  .MouseScrollIcon {
+    .Mouse {
+      border-color: $textColorLight !important;
+    }
+
+    .MouseScroller {
+      background-color: $textColorLight !important;
+    }
+  }
+}
+
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}

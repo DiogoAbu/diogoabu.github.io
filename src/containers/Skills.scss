@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+  .Title {
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 12px;
+  }
+
+  .SkillList > div {
+    margin: 24px 0;
+  }
+
+  .OtherSkills {
+    width: 80vw;
+    max-width: 500px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > .Tag {
+      margin: 6px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.Link {
+  margin: 0 12px;
+
+  .icon {
+    transition: all 0.2s ease-in-out;
+    & > path {
+      fill: $textColor;
+    }
+  }
+
+  &:hover .icon {
+    transform: scale(1.25);
+  }
+}
+
+.light {
+  .Link .icon > path {
+    fill: $textColorLight !important;
+  }
+}

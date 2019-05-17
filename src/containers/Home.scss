@@ -1,0 +1,64 @@
+@import "../variables.scss";
+
+%text-shadow {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  //background-image: url("/bg1.webp");
+  //background-size: cover;
+
+  .PicContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 24px;
+
+    .Pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+
+  .Name {
+    @extend %text-shadow;
+    margin-bottom: 6px;
+  }
+
+  .Role {
+    @extend %text-shadow;
+    font-size: 75%;
+    margin-bottom: 6px;
+  }
+
+  .Mail {
+    @extend %text-shadow;
+    font-size: 75%;
+  }
+
+  .Buttons {
+    margin: 24px 0;
+  }
+}
+
+.light {
+  .Name {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0) !important;
+  }
+
+  .Role {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0) !important;
+  }
+
+  .Mail {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0) !important;
+  }
+}

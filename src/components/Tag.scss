@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.Tag {
+  padding: 3px 6px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 66%;
+  color: $brandPrimaryTextColor;
+  background: $brandPrimary;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+
+  &.info {
+    color: $brandInfoTextColor;
+    background: $brandInfo;
+  }
+  &.success {
+    color: $brandSuccessTextColor;
+    background: $brandSuccess;
+  }
+  &.warning {
+    color: $brandWarningTextColor;
+    background: $brandWarning;
+  }
+  &.danger {
+    color: $brandDangerTextColor;
+    background: $brandDanger;
+  }
+}
+
+.light {
+  .Tag {
+    color: $brandPrimaryTextColorLight;
+    background: $brandPrimaryLight;
+    &.info {
+      color: $brandInfoTextColorLight;
+      background: $brandInfoLight;
+    }
+    &.success {
+      color: $brandSuccessTextColorLight;
+      background: $brandSuccessLight;
+    }
+    &.warning {
+      color: $brandWarningTextColorLight;
+      background: $brandWarningLight;
+    }
+    &.danger {
+      color: $brandDangerTextColorLight;
+      background: $brandDangerLight;
+    }
+  }
+}

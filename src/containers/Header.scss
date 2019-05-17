@@ -1,0 +1,136 @@
+@import "../variables.scss";
+
+.Header {
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 12px;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  .ButtonDropdown {
+    min-width: 56px;
+    height: 56px;
+    margin-left: 12px;
+
+    .Button {
+      margin-left: 0 !important;
+    }
+  }
+
+  .Button {
+    min-width: 56px;
+    height: 56px;
+    padding: 12px;
+    margin-left: 12px;
+    line-height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: $textColor;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    pointer-events: auto;
+
+    &:hover,
+    &.active {
+      border-color: $buttonBorderColor;
+      cursor: pointer;
+    }
+
+    &.active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .icon {
+      margin-top: 4px;
+      transition: all 0.2s ease-in-out;
+      & > path {
+        fill: $textColor;
+      }
+    }
+  }
+}
+
+.DropdownMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: 1px solid $buttonBorderColor;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+
+  button {
+    width: 100%;
+    padding: 12px;
+    border: 0 none;
+    background: transparent;
+    color: $textColor;
+    font-size: 16px;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      background: $bgColorContrast;
+    }
+
+    &.active,
+    &.active:hover {
+      color: $brandPrimaryTextColor;
+      background: $brandPrimary !important;
+    }
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-color: transparent;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.light {
+  .Header {
+    .Button {
+      color: $textColorLight;
+
+      &:hover {
+        border-color: $buttonBorderColorLight;
+      }
+
+      .icon > path {
+        fill: $textColorLight !important;
+      }
+    }
+  }
+
+  .DropdownMenu {
+    button {
+      color: $textColorLight;
+
+      &:hover {
+        background: $bgColorContrastLight;
+      }
+
+      &.active,
+      &.active:hover {
+        color: $brandPrimaryTextColorLight;
+        background: $brandPrimaryLight !important;
+      }
+    }
+  }
+}

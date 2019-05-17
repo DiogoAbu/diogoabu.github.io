@@ -6,7 +6,7 @@ Usei React `16.8` com hooks para criá-lo.
 
 Utilizei também `node-sass` para requerir arquivos `scss` diretamente no Componente.
 
-Para a intercionalização do site usei `i18next` com detecção de linguagem e carregamento das `locales` por XHR.
+Para a internacionalização do site usei `i18next` com detecção de linguagem e carregamento das `locales` por XHR.
 
 No site há links para o LinkedIn, para meu perfil aqui no GitHub e para meu Curriculum que muda conforme a linguagem escolhida.
 

@@ -23,7 +23,7 @@ function DropdownMenu({ buttonRef, menuRef, onClick, currentLang }) {
   };
 
   return ReactDOM.createPortal(
-    <div ref={menuRef} className="DropdownMenu" style={style}>
+    <div className="DropdownMenu" style={style} ref={menuRef}>
       {availableLangs.map(code => (
         <button
           key={code}

@@ -54,8 +54,8 @@ body {
 }
 
 .light {
-  background-color: $bgColorLight !important;
-  color: $textColorLight !important;
+  background-color: $bgColorLight;
+  color: $textColorLight;
 
   .scrollbar-container {
     .scrollbar {

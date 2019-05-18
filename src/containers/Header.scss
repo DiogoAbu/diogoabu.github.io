@@ -87,7 +87,7 @@
     &.active,
     &.active:hover {
       color: $brandPrimaryTextColor;
-      background: $brandPrimary !important;
+      background: $brandPrimary;
     }
 
     &:first-child {
@@ -96,7 +96,6 @@
     }
 
     &:last-child {
-      border-color: transparent;
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
     }
@@ -119,7 +118,11 @@
   }
 
   .DropdownMenu {
+    background: $bgColorLight;
+    border: 1px solid $buttonBorderColorLight;
+
     button {
+      background: $bgColorLight;
       color: $textColorLight;
 
       &:hover {
@@ -129,7 +132,7 @@
       &.active,
       &.active:hover {
         color: $brandPrimaryTextColorLight;
-        background: $brandPrimaryLight !important;
+        background: $brandPrimaryLight;
       }
     }
   }

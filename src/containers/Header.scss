@@ -35,13 +35,14 @@
     color: $textColor;
     border: 1px solid transparent;
     border-radius: 6px;
-    background-color: transparent;
+    background: transparent;
     transition: all 0.1s ease-in-out;
     pointer-events: auto;
     outline: 0;
 
     &:hover,
     &.active {
+      background: $bgColor;
       border-color: $buttonBorderColor;
       cursor: pointer;
     }
@@ -107,6 +108,11 @@
     .Button {
       color: $textColorLight;
 
+      &:hover,
+      &.active {
+        background: $bgColorLight;
+      }
+
       &:hover {
         border-color: $buttonBorderColorLight;
       }
@@ -119,7 +125,7 @@
 
   .DropdownMenu {
     background: $bgColorLight;
-    border: 1px solid $buttonBorderColorLight;
+    border-color: $buttonBorderColorLight;
 
     button {
       background: $bgColorLight;

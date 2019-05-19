@@ -16,6 +16,10 @@ i18n
       escapeValue: false // react already safes from xss
     },
 
+    react: {
+      useSuspense: false
+    },
+
     backend: {
       // for all available options read the backend's repository readme file
       loadPath: "/locales/{{lng}}/{{ns}}.json"

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.diogoabu.howmuch",
+      "sha256_cert_fingerprints": [
+        "F2:D3:DE:86:C6:FC:6C:0F:60:91:BB:BE:36:4D:59:87:97:0C:35:8D:25:43:4C:E4:1A:23:2F:FF:69:3A:DD:36"
+      ]
+    }
+  }
+]
